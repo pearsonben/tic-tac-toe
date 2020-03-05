@@ -1,5 +1,5 @@
 import React from 'react'
-import Square from './square.js'
+import './board.css'
 
 export default class Board extends React.Component{
     constructor(props){
@@ -37,7 +37,7 @@ export default class Board extends React.Component{
             <div className="container">
 
                 <div className="row">
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         
                         <button onClick={() => {
                             if(this.state.boardState[0][0] === 0){
@@ -58,7 +58,7 @@ export default class Board extends React.Component{
                             })()}
                         </button>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <button onClick={() => {
                             if(this.state.boardState[0][1] === 0){
                                 newBoardState[0][1] = newBoardState[0][1] + this.state.currentTurn;
@@ -78,7 +78,7 @@ export default class Board extends React.Component{
                             })()}
                         </button>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <button onClick={() => {
                             if(this.state.boardState[0][2] === 0){
                                 newBoardState[0][2] = newBoardState[0][2] + this.state.currentTurn;
@@ -101,7 +101,7 @@ export default class Board extends React.Component{
                 </div>
 
                 <div className="row">
-                    <div className="col-sm">
+                    <div className="col-md-4">
                         <button onClick={() => {
                             if(this.state.boardState[1][0] === 0){
                                 newBoardState[1][0] = newBoardState[1][0] + this.state.currentTurn;
@@ -121,23 +121,108 @@ export default class Board extends React.Component{
                             })()}
                         </button>
                     </div>
-                    <div className="col-sm">
-                        <Square position="5"/>
+                    <div className="col-md-4">
+                        <button onClick={() => {
+                            if(this.state.boardState[1][1] === 0){
+                                newBoardState[1][1] = newBoardState[1][1] + this.state.currentTurn;
+                                this.setState({boardState: newBoardState});
+                                this.handleClick();
+                            }
+                            
+                            
+                        }}>
+                            {(() => {
+                                switch(this.state.boardState[1][1]){
+                                    case 1 : return cross;
+                                    case 2 : return nought;
+                                    default : return null;
+                                }
+                                
+                            })()}
+                        </button>
                     </div>
-                    <div className="col-sm">
-                        <Square position="6"/>
+                    <div className="col-md-4">
+                        <button onClick={() => {
+                            if(this.state.boardState[1][2] === 0){
+                                newBoardState[1][2] = newBoardState[1][2] + this.state.currentTurn;
+                                this.setState({boardState: newBoardState});
+                                this.handleClick();
+                            }
+                            
+                            
+                        }}>
+                            {(() => {
+                                switch(this.state.boardState[1][2]){
+                                    case 1 : return cross;
+                                    case 2 : return nought;
+                                    default : return null;
+                                }
+                                
+                            })()}
+                        </button>
                     </div>
                 </div>
 
                 <div className="row">
-                    <div className="col-sm">
-                        <Square position="7"/>
+                    <div className="col-md-4">
+                        <button onClick={() => {
+                            if(this.state.boardState[2][0] === 0){
+                                newBoardState[2][0] = newBoardState[2][0] + this.state.currentTurn;
+                                this.setState({boardState: newBoardState});
+                                this.handleClick();
+                            }
+                            
+                            
+                        }}>
+                            {(() => {
+                                switch(this.state.boardState[2][0]){
+                                    case 1 : return cross;
+                                    case 2 : return nought;
+                                    default : return null;
+                                }
+                                
+                            })()}
+                        </button>
                     </div>
-                    <div className="col-sm">
-                        <Square position="8"/>
+                    <div className="col-md-4">
+                        <button onClick={() => {
+                            if(this.state.boardState[2][1] === 0){
+                                newBoardState[2][1] = newBoardState[2][1] + this.state.currentTurn;
+                                this.setState({boardState: newBoardState});
+                                this.handleClick();
+                            }
+                            
+                            
+                        }}>
+                            {(() => {
+                                switch(this.state.boardState[2][1]){
+                                    case 1 : return cross;
+                                    case 2 : return nought;
+                                    default : return null;
+                                }
+                                
+                            })()}
+                        </button>
                     </div>
-                    <div className="col-sm">
-                        <Square position="9"/>
+                    <div className="col-md-4">
+                        <button onClick={() => {
+                            if(this.state.boardState[2][2] === 0){
+                                newBoardState[2][2] = newBoardState[2][2] + this.state.currentTurn;
+                                this.setState({boardState: newBoardState});
+                                this.handleClick();
+                            }
+                            
+                            
+                        }}>
+                            {(() => {
+                                switch(this.state.boardState[2][2]){
+                                    case 1 : return cross;
+                                    case 2 : return nought;
+                                    default : return null;
+                                }
+                                
+                            })()}
+                        </button>
                     </div>
                 </div>
             </div>
